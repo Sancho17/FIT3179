@@ -1,12 +1,38 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "A bar chart showing the US population distribution of age groups in 2000.",
-    "height": {"step": 17},
-    "data": {"url": "https://raw.githubusercontent.com/Sancho17/FIT3179/main/editedcsv.csv"},
-  
-    "mark": "bar",
+    "description": "Bar chart with text labels. Set domain to make the frame cover the labels.",
+    "title": "Unemployment rates throughout the world", 
+    "width": 400, 
+    "height": 300, 
+    "data": {
+      "values": [
+        {"a": "Kosovo", "b": 30.34},
+        {"a": "Greece", "b": 21.49},
+        {"a": "Australia", "b": 5.59},
+        {"a": "New Zealand", "b": 4.74},
+        {"a": "United States", "b": 4.36},
+        {"a": "United Kingdom", "b": 4.33},
+        {"a": "Qatar", "b": 0.14},
+        {"a": "China", "b": 3.9}
+      ]
+    },
     "encoding": {
-      "y": {"field": "Country"},
-      "x": {"aggregate": "sum", "field": "unemploymentr ", "title": "population"}
-    }
+      "y": {"field": "a", "type": "nominal" ,"title": "Countries"},
+      "x": {"field": "b", "title": "Unemployment rate %", "type": "quantitative", "scale": {"domain": [0, 35]}}
+    },
+    "layer": [{
+      "mark": "bar"
+    }, {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 3
+      },
+      "encoding": {
+        "text": {"field": "b", "type": "quantitative"}
+      }
+    }]
+    
   }
+ 
