@@ -13,11 +13,16 @@
         {"a": "United States", "b": 4.36},
         {"a": "United Kingdom", "b": 4.33},
         {"a": "Qatar", "b": 0.14},
-        {"a": "China", "b": 3.9}
+        {"a": "China", "b": 3.9},
+        {"a": "Niger", "b": 7.7},
+        {"a": "South Africa", "b": 27.04},
+        {"a": "Rwanda", "b":17.36},
+        {"a": "Cambodia", "b":0.14}
+        
       ]
     },
     "encoding": {
-      "y": {"field": "a", "type": "nominal" ,"title": "Countries"},
+      "y": {"field": "a", "type": "nominal" ,"title": "Country"},
       "color": {"value": "#fa0000"},
       "x": {"field": "b", "title": "Unemployment rate %", "type": "quantitative", "scale": {"domain": [0, 35]}}
     
