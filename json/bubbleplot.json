@@ -138,7 +138,7 @@
           "color": {"value": "black"}, 
           "opacity": { 
             "condition": { 
-              "test": "datum['Country'] == 'Central African Republic' ||  datum['Country'] == 'Australia' || datum['Country'] == 'New Zealand' ||  datum['Country'] == 'Qatar' ||  datum['Country'] == 'Switzerland'", 
+              "test": "datum['Country'] == 'Central African Republic' ||  datum['Country'] == 'Australia' || datum['Country'] == 'New Zealand' ||  datum['Country'] == 'Qatar' ||  datum['Country'] == 'Switzerland'|| datum['Country'] == 'United States of America'" , 
               "value": 1 
             }, 
             "value": 0 
