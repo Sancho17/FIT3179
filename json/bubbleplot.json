@@ -73,6 +73,7 @@
         "selection": { 
           "continent_highlight": { 
             "type": "multi", 
+            
             "fields": ["Continent"], 
             "bind": "legend" 
           } 
@@ -91,6 +92,7 @@
           }, 
           "color": { 
             "field": "continent", 
+            "title" : "Continent",
             "type": "nominal", 
             "scale": { 
               "domain": [ "North America", 

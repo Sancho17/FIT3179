@@ -18,7 +18,10 @@
     },
     "encoding": {
       "y": {"field": "a", "type": "nominal" ,"title": "Countries"},
+      "color": {"value": "#fa0000"},
       "x": {"field": "b", "title": "Unemployment rate %", "type": "quantitative", "scale": {"domain": [0, 35]}}
+    
+
     },
     "layer": [{
       "mark": "bar"
@@ -29,6 +32,8 @@
         "baseline": "middle",
         "dx": 3
       },
+   
+  
       "encoding": {
         "text": {"field": "b", "type": "quantitative"}
       }
