@@ -82,6 +82,7 @@
         "encoding": { 
           "size": { 
             "field": "population", 
+            "title":"Population",
             "type": "quantitative", 
             "scale": { 
               "type": "threshold", 
