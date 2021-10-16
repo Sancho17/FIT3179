@@ -1,7 +1,7 @@
 { 
   
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Mortality rate for infants (per 1000)",
+    "title": "CO2 Emissions per capita by country (Tons)",
     "width": 500,
     "height": 300,
     "data": {
@@ -11,14 +11,14 @@
     "projection": {"type": "equalEarth"},
     "params": [
       {
-        "name": "electricity_of_Country",
+        "name": "emissionsCapita_of_Country",
         "value": 0,
         "bind": {
           "input": "range",
           "min": 0,
-          "max": 100,
-          "step": 5,
-          "name": "Deaths "
+          "max": 16,
+          "step": 1,
+          "name": "Emissions per capita (Tons) "
         }  }
       ],
     "layer":[
@@ -42,26 +42,26 @@
                 "url": "https://raw.githubusercontent.com/Sancho17/FIT3179/main/editedcsv.csv"
               },
               "key": "Country",
-              "fields": ["electricity "]
+              "fields": ["emissionsCapita"]
             }
           },
-          {"filter": "datum.electricity> electricity_of_Country"}
+          {"filter": "datum.emissionsCapita > emissionsCapita_of_Country"}
           
         ],
         "mark": {"type": "geoshape", "stroke": "white"},
         "encoding": {
           "color": {
-            "field": "electricity",
+            "field": "emissionsCapita",
             "type": "quantitative",
             "scale": {
               "type": "threshold",
-              "domain": [0, 50, 100],
-              "range": ["#fff4e7", "#f6bb89", "#ec7a3c", "#e00000"]
+              "domain": [0, 5, 10, 15],
+              "range": ["#ffd8cb", "#ffaf96", "#f98664", "#ee5735", "#e00000"]
             }
           },
           "tooltip": [
             {"field": "properties.NAME", "type": "nominal", "title": "Country"},
-            {"field": "electricity", "type": "quantitative"}
+            {"field": "emissionsCapita", "type": "quantitative", "title": "Emissions per capita (Tons)"}
           ]
         }
       }
