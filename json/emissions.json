@@ -51,7 +51,8 @@
         "mark": {"type": "geoshape", "stroke": "white"},
         "encoding": {
           "color": {
-            "field": "Quanitity",
+            "field": "emissionsCapita",
+            "title": "Quanitity",
             "type": "quantitative",
             "scale": {
               "type": "threshold",
