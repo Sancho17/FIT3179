@@ -18,47 +18,48 @@
         "step": 1000, 
         "name": "GDP: " 
       } 
-    }
-    { 
-      "name": "continent_selection", 
-      "bind": { 
-        "input": "select", 
-        "options": [ 
-          null, 
-          "North America", 
-          "South America", 
-          "Europe", 
-          "Africa", 
-          "Asia", 
-          "Oceania" 
-        ], 
-        "labels":[ 
-          "Show All", 
-          "North America", 
-          "South America", 
-          "Europe", 
-          "Africa", 
-          "Asia", 
-          "Oceania" 
-        ], 
-        "name": "Continent Selection: " 
-      } 
-    } ,
-    {"name": "lifeexp_Above", 
+    },
+    
+    { "name": "lifeexp_Above", 
     "value": 0, 
     "bind": { 
       "input": "range", 
-      "min": 0, 
+      "min": 50, 
     "max": 100, 
-    "step": 5, 
-    "name": "GDP: " 
-  } }
+    "step": 1, 
+    "name": "Life expectancy: " 
+      
+      } 
+    } , {"name": "continent_selection", 
+    "bind": { 
+      "input": "select", 
+      "options": [ 
+        null, 
+        "North America", 
+        "South America", 
+        "Europe", 
+        "Africa", 
+        "Asia", 
+        "Oceania" 
+      ], 
+      "labels":[ 
+        "Show All", 
+        "North America", 
+        "South America", 
+        "Europe", 
+        "Africa", 
+        "Asia", 
+        "Oceania" 
+      ], 
+      "name": "Continent Selection: " }
+    
+  } 
   ], 
   "transform": [ 
     
     {"filter": "datum.GDP > GDP_Above"}, 
-    {"filter": "continent_selection == null || datum.continent == continent_selection"}
-    {"filter": "datum.lifeexp > lifeexp_Above"},
+    {"filter": "continent_selection == null || datum.continent == continent_selection"},
+    {"filter": "datum.lifeexp > lifeexp_Above"}
     
      
     ], 
@@ -159,7 +160,8 @@
           "tooltip": [ 
             {"field": "Country", "type": "nominal"}, 
             {"field": "GDP", "type": "quantitative", "format": ","},
-            {"field": "population", "type": "quantitative", "format": ","}
+            {"field": "population", "type": "quantitative", "format": ","},
+            {"field": "lifeexp", "type": "quantitative","title" : "Life expectancy" ,"format": ","}
            
             
            
